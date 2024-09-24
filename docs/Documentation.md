@@ -128,11 +128,14 @@ Usage example:
 - perimeter(4.5, 1) - function returns 11
 
 # Version history
-### 2024-09-19
+### 2024-09-2024
 Current version.
+- Updated [Documentation](../docs/Documentation.md) with full version history.
+
+### 2024-09-19 (7452861)
 - Added function descriptions to every file.
 - Added [Documentation](../docs/Documentation.md).
-- Deleted [file](../docs/README.md) with algorithmic realisations, its content is now merged into [Documentation](../docs/Documentation.md).
+- Deleted [file](../docs/README.md) with algorithmic realizations, its content is now merged into [Documentation](../docs/Documentation.md).
 
 ### 2024-09-17 (c845b8e)
 - Added [triangle.py](../triangle.py) with functions area(a, h) and perimeter(a, b, c).
@@ -144,6 +147,30 @@ Current version.
 ### 2024-09-05 (2a81fb1)
 Non-feature release.
 - Creation of a new branch for future development.
+
+### 2021-04-19 (86edb1c)
+- Updated [README.md](../docs/README.md) with info for user agreement.
+
+### 2021-04-19 (438b89a)
+- Added [User agreement](../user_agreement.txt).
+
+### 2021-03-04 (6adb962) (from 8ba9aeb)
+- Added [README.md](../docs/README.md) with documentation for circle, square and rectangle
+
+### 2021-03-30 (3049431) (from d078c8d)
+- Added [rectangle.py](../rectangle.py) with functions area(a, b) and perimeter(a, b)
+
+### 2021-03-30 (b5b0fae)
+- Updated [README.md](../docs/README.md) with documentation for calculate.py library.
+
+### 2021-03-30 (d76db2a)
+- Added [calculate.py](../calculate.py) with functions for circle and square
+
+### 2021-03-26 (51c40eb)
+- Updated [README.md](../docs/README.md) with documentation for triangle.
+
+### 2021-03-26 (d080c78)
+- Added [triangle.py](../triangle.py) with functions area(a, b, c) and perimeter(a, b, c)
 
 ### 2021-03-04 (d078c8d)
 - Added [folder](../docs/) for documentation, including [file](../docs/README.md) with formulas for functions.
