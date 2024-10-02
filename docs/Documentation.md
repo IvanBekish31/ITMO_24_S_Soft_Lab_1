@@ -1,11 +1,14 @@
-# Algorithmic realisation
-## Area
+# Functionality and features
+Python library for geometric calculations of area and perimeter for a set of basic geometric figures.
+---
+## Mathematical realization
+### Area
 - Circle: S = πR<sup>2</sup>
 - Rectangle: S = ab
 - Square: S = a<sup>2</sup>
 - Triangle: S = ah
 
-## Perimeter
+### Perimeter
 - Circle: P = 2πR
 - Rectangle: P = 2a + 2b
 - Square: P = 4a
@@ -128,8 +131,10 @@ Usage example:
 - perimeter(4.5, 1) - function returns 11
 
 # Version history
-### 2024-09-2024
-Current version.
+### 2024-10-02 (Current version)
+- Minor updates for [Documentation](../docs/Documentation.md).
+
+### 2024-09-24 (7348aac)
 - Updated [Documentation](../docs/Documentation.md) with full version history.
 
 ### 2024-09-19 (7452861)
