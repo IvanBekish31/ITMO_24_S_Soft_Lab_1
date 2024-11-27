@@ -1,5 +1,6 @@
 # Functionality and features
 Python library for geometric calculations of area and perimeter for a set of basic geometric figures.
+
 ---
 ## Mathematical realization
 ### Area
@@ -130,8 +131,30 @@ Return value:
 Usage example:
 - perimeter(4.5, 1) - function returns 11
 
+# Testing
+Library should provide simple, reliable and fast set of functions for geometric calculations.
+As such this repository comes with a set of [UnitTests](https://docs.python.org/3/library/unittest.html), which ensure following:
+1) The correctness of calculations in functions, especially edge cases.
+2) The behaviour in unexpected / critical use scenarios.
+3) The computational time for wide range of input values.
+
+Multiple tests for all categories are made for each function, which include:
+- Division by zero
+- Multiplication by zero
+- Values extremely close to 0
+- Negative values (despite being incorrect input)
+- Extremely big values
+- Float values (knowing the python floating point error ranges)
+
+All cases should pass as OK, all asserts must be fulfilled, computational time should be negligible, in range of millisecond.
+Program should not crash or overuse memory, nor affect any variables outside of functions.
+
 # Version history
-### 2024-10-02 (Current version)
+### 2024-11-27 (Current version)
+- Added unit tests for all functions of all files
+- Added section about Testing to the documentation
+
+### 2024-10-02 (2382516)
 - Minor updates for [Documentation](../docs/Documentation.md).
 
 ### 2024-09-24 (7348aac)

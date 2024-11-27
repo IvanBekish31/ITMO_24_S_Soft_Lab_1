@@ -2,6 +2,8 @@
 This is a file with realisations for geometric functions for a square
 '''
 
+import unittest
+
 def area(a):
     '''
     Returns area of a square by given length of its edge.
@@ -36,3 +38,30 @@ def perimeter(a):
             function returns 44
     '''
     return 4 * a
+
+class SquareTestCase(unittest.TestCase):
+    # Area tests 
+    def test_area_zero(self):
+        self.assertEqual(area(0), 0)
+
+    def test_area_float(self):
+        self.assertEqual(area(0.5), 0.25)
+        self.assertEqual(area(2.5), 6.25)
+        self.assertEqual(area(1.0), 1.0)
+
+    def test_area_edge(self):
+        self.assertEqual(area(1000000), 1000000000000)
+        
+
+    # Perimeter tests
+    def test_perimeter_zero(self):
+        self.assertEqual(perimeter(0), 0)
+
+
+    def test_perimeter_float(self):
+        self.assertEqual(perimeter(0.5), 2)
+        self.assertEqual(perimeter(2.5), 10)
+        self.assertEqual(perimeter(10.01), 40.04)
+    
+    def test_perimeter_edge(self):
+        self.assertEqual(perimeter(1000000000000), 4000000000000)

@@ -2,6 +2,8 @@
 This is a file with realisations for geometric functions for a triangle
 '''
 
+import unittest
+
 def area(a, h):  
     '''
     Returns area of a triangle by given lengths of its 2 height and length of edge, to which height is drawn.
@@ -38,3 +40,30 @@ def perimeter(a, b, c):
             function returns 14
     '''
     return a + b + c  
+
+
+class TriangleTestCase(unittest.TestCase):
+    # Area tests 
+    def test_area_zero(self):
+        for x in [-1, 0, 1, 7, 1000000]:
+            with self.subTest(x=x):
+                self.assertEqual(area(x, 0), 0)
+                self.assertEqual(area(0, x), 0)
+
+    def test_area_float(self):
+        self.assertEqual(area(0.5, 0.5), 0.125)
+        self.assertEqual(area(111.1, 222.2), 12343.21)
+
+    def test_area_edge(self):
+        self.assertEqual(area(1000000, 999999), 499999500000)
+
+    # Perimeter tests
+    def test_perimeter_zero(self):
+        self.assertEqual(perimeter(0, 0, 0), 0)
+
+    def test_perimeter_float(self):
+        self.assertEqual(perimeter(0.6, 1.4, 2.5), 4.5)
+        self.assertEqual(perimeter(20, 1.5, 40.6), 62.1)
+
+    def test_perimeter_edge(self):
+        self.assertEqual(perimeter(1000000, 555555, 995), 1556550)
