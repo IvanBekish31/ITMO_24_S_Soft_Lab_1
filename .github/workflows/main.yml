@@ -1,0 +1,25 @@
+name: RunTests
+
+on:
+  push:
+    branches: [ new_features_311614 ]
+  workflow_dispatch:
+
+jobs:
+  unittest:
+    name: Running unittests on ${{ matrix.os }} for file ${{ matrix.file }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        file: ['circle.py', 'rectangle.py', 'square.py', 'triangle.py']
+        os: [windows-latest, ubuntu-latest]
+    
+    steps:
+     - name: Install Python
+       uses: actions/setup-python@v5.3.0
+     - name: Test File Win
+       if: matrix.os == windows-latest
+       run: python.exe -m unittest .\${{ matrix.file }}
+     - name: Test File Linux
+       if: matrix.os == ubuntu-latest
+       run: python -m unittest ${{ matrix.file }}
