@@ -150,6 +150,11 @@ All cases should pass as OK, all asserts must be fulfilled, computational time s
 Program should not crash or overuse memory, nor affect any variables outside of functions.
 
 # Version history
+### 2024-11-28 (f4b8245)
+
+### 2024-11-28 (05a6e0d-2b26d4f)
+- Process of creating workflow
+
 ### 2024-11-27 (Current version)
 - Added unit tests for all functions of all files
 - Added section about Testing to the documentation
