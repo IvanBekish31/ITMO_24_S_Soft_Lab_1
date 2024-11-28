@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  unittest:
+  unittest-win:
     name: Running unittests on ${{ matrix.os }} for file ${{ matrix.file }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -15,7 +15,7 @@ jobs:
         os: [windows-latest]
     
     steps:  
-     - name: Install Chckout
+     - name: Install Checkout
        uses: actions/checkout@v4
      - name: Install Python
        uses: actions/setup-python@v5.3.0
@@ -24,3 +24,22 @@ jobs:
          
      - name: Test File
        run: python -m unittest .\${{ matrix.file }}
+       
+  unittest-linux:
+    name: Running unittests on ${{ matrix.os }} for file ${{ matrix.file }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        file: ['circle.py', 'rectangle.py', 'square.py', 'triangle.py']
+        os: [ubuntu-latest]
+    
+    steps:  
+     - name: Install Checkout
+       uses: actions/checkout@v4
+     - name: Install Python
+       uses: actions/setup-python@v5.3.0
+       with:
+         python-version: '3.10'
+         
+     - name: Test File
+       run: python -m unittest ./${{ matrix.file }}
